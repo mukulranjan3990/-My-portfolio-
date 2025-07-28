@@ -18,7 +18,7 @@
       padding: 1rem 2rem;
       background: #1a1a2e;
       position: sticky;
-      top: 0;
+      top: -1px;
       z-index: 1000;
     }
 
@@ -95,6 +95,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap:3%;
     }
     .profile-pic {
       width: 29.7%;
@@ -213,4 +214,156 @@
       margin-top: 0.5rem;
       color: gold;
       font-style: italic;
+    }
+    
+    @media (max-width: 953px ), (orientation: landscape) {
+        .name {
+      color: gold;
+      font-size: 0.6rem;
+      font-weight: bold;
+    }
+
+    .main-nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.8rem;
+      font-weight: 750;
+      transition: color 0.3s ease;
+    }
+        .home-content{
+        font-size: 1.1rem;
+      display: flex;
+      flex-direction: row;
+      gap: 13%;
+      
+    }
+    .home-content p{
+        font-size: medium;
+    }
+    .title {
+      font-size: 1rem;
+    }
+        .profile-pic {
+            width: 34%;
+            margin-bottom: 1.5rem;
+        }
+
+    .btn {
+      font-size:0.6rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      margin: 2rem 0.8rem;
+      border-radius: 5px;
+      
+    }
+    }
+
+     @media (max-width: 953px ), (orientation: portrait) {
+        .name {
+      font-size: 0.6rem;
+    }
+
+    .main-nav a {
+      margin-left: 1rem;
+      font-size: 0.8rem;
+      font-weight: 750;
+    }
+        .home-content{
+       
+        font-size: 1.1rem;
+      flex-direction: column;
+      
+    }
+     .home-text {
+      gap:10px;
+    }
+    
+    .title {
+      font-size: 1rem;
+    }
+        .profile-pic {
+            width: 54%;
+            margin-bottom: 4rem;
+           margin-left: 50%;
+           transform: translateX(-50%);
+            
+        }
+
+    .btn {
+      font-size:0.6rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      margin: 2rem 0.8rem;
+      border-radius: 5px;
+      
+    }
+    }
+    @media (max-width: 670px){
+        .main-header {
+            flex-direction: column;
+            padding: 0.8rem 0.5rem;
+            gap: 0.5rem;
+        }
+        .logo {
+            margin-bottom: 0.5rem;
+        }
+        .name {
+            font-size: 1.3rem;
+        }
+        
+        .main-nav a {
+            font-size: 0.8rem;
+            margin-left: 1.3rem;
+        }
+       
+        .profile-pic {
+            width: 80vw;
+            max-width: 250px;
+            margin-bottom: 1rem;
+        }
+       
+       
+        .btn {
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0.2rem;
+        }
+    }
+    @media (max-width: 520px) {
+        .main-header {
+            padding: 0.6rem 0.2rem;
+            gap: 0.3rem;
+        }
+        .logo {
+            margin-bottom: 0.3rem;
+        }
+        .name {
+            font-size: 0.85rem;
+        }
+       
+        .main-nav a {
+            font-size: 0.57rem;
+            margin-left: 0.7rem;
+        }
+        .home-content {
+            flex-direction: column;
+             margin-top: -4rem; 
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            align-items: center;
+            
+        }
+        .profile-pic {
+            width: 90vw;
+            max-width: 180px;
+            margin-bottom: 0.7rem;
+            margin-left: 44vw;
+        }
+       
+        .btn {
+            font-size: 0.7rem;
+            padding: 0.4rem 0.7rem;
+            margin: 0.7rem 0.1rem;
+        }
     }
