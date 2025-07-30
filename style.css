@@ -474,6 +474,22 @@ body {
     margin: 2rem 0.8rem;
     border-radius: 5px;
   }
+
+   .slide {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s ease-in-out;
+  }
+
+  .slide.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .skills li:hover {
+    transform: scale(1.28);
+    cursor: pointer;
+  }
 }
 @media (max-width: 670px) {
   .main-header {
