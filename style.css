@@ -436,7 +436,6 @@ body {
   .home-content {
     font-size: 0.8rem;
     flex-direction: column;
-    transition: font-size 0.6s;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -446,7 +445,7 @@ body {
 
   .home-content p {
     font-size: small;
-    transition: font-size 0.6s;
+   
   }
 
   .home-text {

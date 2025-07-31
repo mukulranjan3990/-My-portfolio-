@@ -1,4 +1,4 @@
-// You can add animation or future scroll effects here
+
  document.querySelectorAll('.main-nav a').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -6,16 +6,47 @@
         document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
       });
     });
-
-    // Contact form feedback
     document.querySelector('.contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert("Thank you, your message has been sent!");
-      this.reset();
+
+      const name = this.querySelector('input[name="name"]').value.trim();
+      const email = this.querySelector('input[name="email"]').value.trim();
+      const mobile = this.querySelector('input[name="mobile"]').value.trim();
+      const message = this.querySelector('textarea[name="message"]').value.trim();
+
+    
+      const nameRegex = /^[A-Za-z\s]+$/;
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      const mobileRegex = /^[6-9]\d{9}$/;
+
+      if (!nameRegex.test(name)) {
+        alert("Please enter a valid name (letters and spaces only).");
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      if (!mobileRegex.test(mobile)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+      }
+      if (message.length === 0) {
+        alert("Please enter your message.");
+        return;
+      }
+
+    
+      
+      alert("Sorry, there was a problem sending your message.");
+    
     });
 
-    // Reveal slides on scroll
+  
     
+ 
 
   const slides = document.querySelectorAll('.slide');
 
