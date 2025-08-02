@@ -111,11 +111,10 @@ body {
 }
 .btn-group {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   gap: 1.2%;
   margin-top: 1rem;
   justify-content: center;
-
 }
 
 .btn {
@@ -214,6 +213,7 @@ body {
 }
 .contact-form textarea {
   height: 140px;
+  resize: none;
 }
 
 .contact-form button {
@@ -254,90 +254,164 @@ body {
   font-style: italic;
 }
 
- .main-footer {
-    background: #111;
-    color: #fff;
-    padding: 40px 0 0 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 0 0 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
 
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    
-    margin: 0 auto;
-    padding: 0 30px;
-    flex-wrap: wrap;
-  }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
-  .footer-left h3 {
-    margin: 0 0 10px 0;
-    font-size: 3vh;
-    letter-spacing: 1px;
-    color: #fff;
-  }
+  margin: 0 auto;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
 
-  .footer-left p {
-    margin: 0;
-    color: #bbb;
-    font-size: 1rem;
-  }
+.footer-left h3 {
+  margin: 0 0 10px 0;
+  font-size: 3vh;
+  letter-spacing: 1px;
+  color: #fff;
+}
 
-  .footer-right h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    color: #fff;
-    letter-spacing: 1px;
-  }
+.footer-left p {
+  margin: 0;
+  color: #bbb;
+  font-size: 1rem;
+}
 
-  .social-icons {
-    display: flex;
-    gap: 18px;
-  }
+.footer-right h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
 
-  .social-icons a img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1);
-    transition: filter 0.2s, transform 0.2s;
-  }
+.social-icons {
+  display: flex;
+  gap: 18px;
+}
 
-  .social-icons a:hover img {
-    filter: brightness(0) invert(0.5) sepia(1) hue-rotate(180deg) saturate(2);
-    transform: scale(1.1);
-  }
+.social-icons a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s, transform 0.2s;
+}
 
-  hr {
-    border: none;
-    border-top: 1px solid #333;
-    margin: 30px 0 0 0;
-  }
+.social-icons a:hover img {
+  filter: brightness(0) invert(0.5) sepia(1) hue-rotate(180deg) saturate(2);
+  transform: scale(1.1);
+}
 
-  .footer-bottom {
-    text-align: center;
-    padding: 18px 0 10px 0;
-    color: #bbb;
-    font-size: 0.98rem;
-  }
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 30px 0 0 0;
+}
 
-  .footer-bottom a {
-    color: #4fd1c5;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
+.footer-bottom {
+  text-align: center;
+  padding: 18px 0 10px 0;
+  color: #bbb;
+  font-size: 0.98rem;
+}
 
-  .footer-bottom a:hover {
-    color: #fff;
-  }
+.footer-bottom a {
+  color: #4fd1c5;
+  text-decoration: none;
+  transition: color 0.2s;
+}
 
- @media(max-width: 1100px){
+.footer-bottom a:hover {
+  color: #fff;
+}
+.skills-slide {
+  gap: 30px;
+}
+#skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+  margin: auto;
+}
+.skillstyle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  background-color: #00082900;
+  max-width: 95%;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 14px;
+  padding: 1rem;
+  gap: 20px;
+  align-content: center;
+}
+.skillpercent {
+  width: 100%;
+  background-color: #ffffff;
+   border-radius: 8px;
+}
+
+.marker {
+  text-align:right;
+  position: relative;
+  color: rgb(254, 253, 255);
+  background-color: rgb(17, 0, 255);
+  width: 90%;
+  height: 13px;
+  font-size: 0.7rem;
+  border-radius: 8px;
+  padding-right: 12px;
+}
+.show-projects {
+  height: max-content;
+  padding: 1rem 1.2rem;
+  color: #ccc;
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  
+ 
+}
+.show-projects:hover {
+  background-color: #000000;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.marker::after{
+   content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #0d00ff;
+  top: -5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.button-text {
+  font-weight: bold;
+  color: #d6e10b;
+}
+@media (max-width: 1100px) {
   .footer-left p {
     max-width: 300px;
     font-size: 0.93rem;
   }
-  
-  .footer-left h3{
+
+  .footer-left h3 {
     font-size: 3vh;
   }
 
@@ -350,10 +424,7 @@ body {
     width: 19px;
     height: 19px;
   }
- }
-
-
-
+}
 
 @keyframes mymove {
   from {
@@ -421,6 +492,12 @@ body {
     transform: scale(1.28);
     cursor: pointer;
   }
+
+  .show-projects{
+  margin-left: 35%;
+  margin-right: 35%;
+ 
+}
 }
 
 @media (orientation: portrait) {
@@ -445,7 +522,6 @@ body {
 
   .home-content p {
     font-size: small;
-   
   }
 
   .home-text {
@@ -459,10 +535,9 @@ body {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-   
   }
 
-  .home-text h2{
+  .home-text h2 {
     font-size: larger;
   }
 
@@ -474,7 +549,7 @@ body {
     border-radius: 5px;
   }
 
-   .slide {
+  .slide {
     opacity: 0;
     transform: scale(0.8);
     transition: all 1s ease-in-out;
@@ -489,6 +564,31 @@ body {
     transform: scale(1.28);
     cursor: pointer;
   }
+  .show-projects{
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: smaller;
+ 
+}
+.marker {
+  text-align: right;
+  height: 10px;
+  font-size: 1.1%;
+ 
+}
+
+.marker::after{
+  
+  width: 10px;
+  height: 10px;
+  right: -12px;
+  top: -6px;
+}
+
+
+.skillstyle{
+  gap:14px;
+}
 }
 @media (max-width: 670px) {
   .main-header {
@@ -512,7 +612,6 @@ body {
     width: 80vw;
     max-width: 250px;
     margin-bottom: 1rem;
-    
   }
 
   .btn-group a {
@@ -530,6 +629,14 @@ body {
   .contact-form textarea {
     height: 100px;
   }
+
+  .htag{
+    font-size: 0.7rem;
+  }
+  .marker {
+  height: 6px;
+  font-size: 5px;
+}
 }
 @media (max-width: 520px) {
   .main-header {
@@ -576,18 +683,17 @@ body {
     height: 93px;
   }
 
-
-  .footer-left  {
+  .footer-left {
     text-align: center;
   }
-  
-  .footer-left p{
+
+  .footer-left p {
     max-width: 450px;
   }
 
-  .footer-right{
+  .footer-right {
     text-align: center;
-  } 
+  }
 
   .footer-content {
     display: flex;
@@ -596,4 +702,12 @@ body {
     align-items: center;
     gap: 22px;
   }
+  .show-projects{
+  
+  margin-left: 28%;
+  margin-right: 28%;
+  font-size: 0.6rem;
+  padding: 0.7rem 0.9rem;
+ 
+}
 }
