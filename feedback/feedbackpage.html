@@ -1,0 +1,304 @@
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Feedback</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <header class="main-header">
+      <div class="logo">
+        <div class="circle">SE</div>
+        <h1 class="name">MUKUL RANJAN</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#about">About Me</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#feedback-section">Feedback</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header> 
+
+    <div class="container">
+        <div class="feedback-form-wrapper">
+            <div class="card feedback-card">
+                <div class="card__body">
+                    <h1 class="feedback-title">Portfolio Feedback</h1>
+                    
+                    <!-- Step Indicators -->
+                    <div class="step-indicators">
+                        <div class="step-indicator active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Personal Info</span>
+                        </div>
+                        <div class="step-indicator" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Rating</span>
+                        </div>
+                        <div class="step-indicator" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Feedback</span>
+                        </div>
+                    </div>
+
+                    <!-- Form Container -->
+                    <form id="feedbackForm" class="feedback-form">
+                        <!-- Step 1: Personal Info -->
+                        <div class="form-step active" data-step="1">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Rating and Evaluation -->
+                        <div class="form-step" data-step="2">
+                            <div class="form-group">
+                                <label class="form-label">Overall Rating *</label>
+                                <div class="rating-container">
+                                    <div class="star-rating" id="overallRating">
+                                        <span class="star" data-rating="1">★</span>
+                                        <span class="star" data-rating="2">★</span>
+                                        <span class="star" data-rating="3">★</span>
+                                        <span class="star" data-rating="4">★</span>
+                                        <span class="star" data-rating="5">★</span>
+                                    </div>
+                                    <input type="hidden" id="rating" name="rating" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Service Quality Ratings</label>
+                                <div class="service-ratings-grid">
+                                    <div class="service-rating-item">
+                                        <div class="service-label">Communication</div>
+                                        <div class="circular-progress" data-service="Communication">
+                                            <svg class="progress-ring" width="80" height="80">
+                                                <circle class="progress-ring__circle-bg" stroke="#e5e7eb" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                                <circle class="progress-ring__circle" stroke="#10b981" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                            </svg>
+                                            <div class="progress-value">0.0</div>
+                                        </div>
+                                        <input type="range" class="service-slider" data-service="Communication" min="0" max="5" step="0.1" value="0">
+                                        <div class="slider-value">0.0 / 5.0</div>
+                                    </div>
+
+                                    <div class="service-rating-item">
+                                        <div class="service-label">Quality of work</div>
+                                        <div class="circular-progress" data-service="Quality">
+                                            <svg class="progress-ring" width="80" height="80">
+                                                <circle class="progress-ring__circle-bg" stroke="#e5e7eb" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                                <circle class="progress-ring__circle" stroke="#10b981" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                            </svg>
+                                            <div class="progress-value">0.0</div>
+                                        </div>
+                                        <input type="range" class="service-slider" data-service="Quality" min="0" max="5" step="0.1" value="0">
+                                        <div class="slider-value">0.0 / 5.0</div>
+                                    </div>
+
+                                    <div class="service-rating-item">
+                                        <div class="service-label">Professionalism</div>
+                                        <div class="circular-progress" data-service="Professionalism">
+                                            <svg class="progress-ring" width="80" height="80">
+                                                <circle class="progress-ring__circle-bg" stroke="#e5e7eb" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                                <circle class="progress-ring__circle" stroke="#10b981" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                            </svg>
+                                            <div class="progress-value">0.0</div>
+                                        </div>
+                                        <input type="range" class="service-slider" data-service="Professionalism" min="0" max="5" step="0.1" value="0">
+                                        <div class="slider-value">0.0 / 5.0</div>
+                                    </div>
+
+                                    <div class="service-rating-item">
+                                        <div class="service-label">Creativity</div>
+                                        <div class="circular-progress" data-service="Creativity">
+                                            <svg class="progress-ring" width="80" height="80">
+                                                <circle class="progress-ring__circle-bg" stroke="#e5e7eb" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                                <circle class="progress-ring__circle" stroke="#10b981" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                            </svg>
+                                            <div class="progress-value">0.0</div>
+                                        </div>
+                                        <input type="range" class="service-slider" data-service="Creativity" min="0" max="5" step="0.1" value="0">
+                                        <div class="slider-value">0.0 / 5.0</div>
+                                    </div>
+                                    
+                                    <div class="service-rating-item">
+                                        <div class="service-label">Timeliness</div>
+                                        <div class="circular-progress" data-service="Timeliness">
+                                            <svg class="progress-ring" width="80" height="80">
+                                                <circle class="progress-ring__circle-bg" stroke="#e5e7eb" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                                <circle class="progress-ring__circle" stroke="#10b981" stroke-width="6" fill="transparent" r="34" cx="40" cy="40"/>
+                                            </svg>
+                                            <div class="progress-value">0.0</div>
+                                        </div>
+                                        <input type="range" class="service-slider" data-service="Timeliness" min="0" max="5" step="0.1" value="0">
+                                        <div class="slider-value">0.0 / 5.0</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Would you recommend us? *</label>
+                                <div class="radio-group">
+                                    <label class="radio-item">
+                                        <input type="radio" name="recommend" value="yes" required>
+                                        <span class="radio-mark"></span>
+                                        Yes
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="recommend" value="maybe" required>
+                                        <span class="radio-mark"></span>
+                                        Maybe
+                                    </label>
+                                    <label class="radio-item">
+                                        <input type="radio" name="recommend" value="no" required>
+                                        <span class="radio-mark"></span>
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Detailed Feedback -->
+                        <div class="form-step" data-step="3">
+                            <div class="form-group">
+                                <label for="liked" class="form-label">What did you like?</label>
+                                <textarea id="liked" name="liked" class="form-control" rows="4" placeholder="Tell us what you enjoyed about our service..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="improvements" class="form-label">Areas for improvement</label>
+                                <textarea id="improvements" name="improvements" class="form-control" rows="4" placeholder="How can we improve our service?"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="comments" class="form-label">Additional comments</label>
+                                <textarea id="comments" name="comments" class="form-control" rows="4" placeholder="Any other feedback you'd like to share..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-item permission-checkbox">
+                                    <input type="checkbox" name="displayPermission" id="displayPermission">
+                                    <span class="checkmark"></span>
+                                    I give permission to display my feedback publicly
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="form-navigation">
+                            <button type="button" id="backBtn" class="btn btn--outline navigation-btn" style="display: none;">BACK</button>
+                            <button type="button" id="nextBtn" class="btn btn--primary navigation-btn">NEXT</button>
+                            <button type="submit" id="submitBtn" class="btn btn--primary navigation-btn" style="display: none;">SUBMIT</button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message hidden">
+                        <h3>Thank you for your feedback!</h3>
+                        <p>Your feedback has been submitted successfully.</p>
+                        <button type="button" id="newFeedbackBtn" class="btn btn--primary">Submit Another Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Display Section -->
+        <div class="feedback-display-section">
+            <h2>Recent Feedback</h2>
+            <div id="feedbackList" class="feedback-list">
+                <!-- Feedbacks will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Mukul Ranjan</h3>
+          <p>
+            Passionate Software Engineer building modern and impactful web
+            experiences.
+          </p>
+        </div>
+        <div class="footer-right">
+          <h4>Social</h4>
+          <div class="social-icons">
+            <a href="https://github.com/mukulranjan3990" target="_blank" aria-label="GitHub">
+              <img src="../image/GitHub.png" alt="GitHub" />
+            </a>
+            <a
+              href="https://in.linkedin.com/in/mukulranjan3990"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <img src="../image/LinkedIn.png" alt="LinkedIn" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+              <img src="../image/Twitter.png" alt="Twitter" />
+            </a>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <img src="../image/Facebook.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <img src="../image/Instagram.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025
+          <a
+            href="https://in.linkedin.com/in/mukulranjan3990"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mukul Ranjan</a
+          >. All rights reserved.
+        </p>
+      </div>
+    </footer>
+      
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
